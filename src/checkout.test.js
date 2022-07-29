@@ -1,9 +1,9 @@
-const totalPriceOf = (itemsScanned) => {
-  let currentPrice = 0
-  currentPrice = itemsScanned.length > 0
-    ? currentPrice + 50
-    : currentPrice
-  return currentPrice
+const totalPriceOf = (items) => {
+  let totalPrice = 0
+  totalPrice = items.length > 0
+    ? totalPrice + 50
+    : totalPrice
+  return totalPrice
 }
 
 describe('Back to the checkout', () => {
