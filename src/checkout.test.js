@@ -1,8 +1,7 @@
 const totalPriceOf = (items) => {
   let totalPrice = 0
-  totalPrice = items.length > 0
-    ? totalPrice + 50
-    : totalPrice
+  if (items.length > 0)
+    totalPrice = totalPrice + 50
   return totalPrice
 }
 
