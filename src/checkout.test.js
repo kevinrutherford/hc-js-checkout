@@ -10,8 +10,8 @@ const totalPriceOf = (items) => {
 describe('Back to the checkout', () => {
   describe('Total price', () => {
     it.each([
-      [  0, []    ],
-      [ 50, ['A'] ],
+      [  0, []         ],
+      [ 50, ['A']      ],
       [ 80, ['A', 'B'] ],
     ])('is %d for a basket containing %s', (expectedTotalPrice, items) => {
       expect(totalPriceOf(items)).toBe(expectedTotalPrice)
