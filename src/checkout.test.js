@@ -1,7 +1,7 @@
-const totalPriceOf = (items) => {
+const totalPriceOf = (items, priceOfA) => {
   let totalPrice = 0
   if (items.length > 0)
-    totalPrice = totalPrice + 50
+    totalPrice = totalPrice + priceOfA
   if (items.length > 1)
     totalPrice = totalPrice + 30
   return totalPrice
@@ -14,7 +14,7 @@ describe('Back to the checkout', () => {
       [ 50, ['A']      ],
       [ 80, ['A', 'B'] ],
     ])('is %d for a basket containing %s', (expectedTotalPrice, items) => {
-      expect(totalPriceOf(items)).toBe(expectedTotalPrice)
+      expect(totalPriceOf(items, 50)).toBe(expectedTotalPrice)
     })
   })
 })
